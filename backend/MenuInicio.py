@@ -306,7 +306,7 @@ def main():
     # Bloque de menú
     #----------------------------------------------------------------------------------------------
     while True:
-        opciones = 4
+        opciones = 5
         while True: 
             print()
             print("---------------------------")
@@ -364,12 +364,75 @@ def main():
                 exit()
             
             
-        elif opcion == "2":   # Opción 2
-            ...
-        elif opcion == "3":   # Opción 3
-            ...
-        elif opcion == "4":   # Opción 4
-            ...
+        elif opcion == "2":
+                OpcionesMenuGestionRutinas=4
+                print()
+                print("---------------------------")
+                print("MENU GESTIÓN DE RUTINAS")
+                print("---------------------------")
+                print("[1] Asignar nueva rutina")
+                print("[2] Modificar Rutina")
+                print("[3] Emitir Resumen de Rutinas asignadas")
+                print("[0] Volver al menú")
+                OpcionMenuGestionRutinas=input("Seleccione una opción: ")
+                if OpcionMenuGestionRutinas in [str(i) for i in range(0, OpcionesMenuGestionRutinas)]:
+                    break
+                else:
+                    input("Opción inválida. Presione ENTER para volver a seleccionar.")
+                print()
+                if OpcionMenuGestionRutinas=="1":
+                    ...
+                elif OpcionMenuGestionRutinas=="2":
+                    ...
+                elif OpcionMenuGestionRutinas=="3":
+                    ...
+                elif OpcionMenuGestionRutinas=="0":
+                    return
+        elif opcion == "3":
+            OpcionesMenuGestionDietas=4
+            print()
+            print("---------------------------")
+            print("MENU GESTIÓN DE DIETAS")
+            print("---------------------------")
+            print("[1] Asignar nueva Dieta")
+            print("[2] Modificar Dieta")
+            print("[3] Emitir Resumen de Dietas asignadas")
+            print("[0] Volver al menú")
+            OpcionMenuGestionDietas=input("Seleccione una opción: ")
+            if OpcionMenuGestionDietas in [str(i) for i in range(0, OpcionesMenuGestionDietas)]:
+                break
+            else:
+                input("Opción inválida. Presione ENTER para volver a seleccionar.")
+            print()
+            if OpcionMenuGestionDietas=="1":
+                ...
+            elif OpcionMenuGestionDietas=="2":
+                ...
+            elif OpcionMenuGestionDietas=="3":
+                ...
+            elif OpcionMenuGestionDietas=="0":
+                return
+            
+        elif opcion == "4":
+            OpcionesInformesGenerales=5
+            print()
+            print("---------------------------")
+            print("INFORMES GENERALES")
+            print("---------------------------")
+            print("[1] Emitir Informe de membresía de los clientes")
+            print("[2] Emitir Informe de Rutinas y Dietas de los clientes")
+            print("[3] Emitir Informe de Clientes Inactivos")
+            print("[0] Volver al menú")
+            OpcionInformesGenerales=input("Seleccione una opción: ")
+            if OpcionInformesGenerales in [str(i) for i in range(0, OpcionesInformesGenerales)]:
+                break
+            else:
+                input("Opción inválida. Presione ENTER para volver a seleccionar.")
+            print()
+            if OpcionInformesGenerales=="1":
+                ...
+            elif OpcionInformesGenerales=="2":
+                ...
 
         input("\nPresione ENTER para volver al menú.")
         print("\n\n")
