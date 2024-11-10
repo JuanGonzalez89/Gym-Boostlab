@@ -1,0 +1,302 @@
+{
+    "1": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Juan P\u00e9rez",
+        "edad": 25,
+        "peso": 70,
+        "altura": 175,
+        "sexo": "M",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "2": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Ana L\u00f3pez",
+        "edad": 30,
+        "peso": 65,
+        "altura": 160,
+        "sexo": "F",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "3": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Carlos Garc\u00eda",
+        "edad": 35,
+        "peso": 80,
+        "altura": 180,
+        "sexo": "M",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "4": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Mar\u00eda Rodr\u00edguez",
+        "edad": 28,
+        "peso": 55,
+        "altura": 165,
+        "sexo": "F",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "5": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Pedro S\u00e1nchez",
+        "edad": 40,
+        "peso": 90,
+        "altura": 185,
+        "sexo": "M",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "6": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Luc\u00eda Fern\u00e1ndez",
+        "edad": 22,
+        "peso": 50,
+        "altura": 158,
+        "sexo": "F",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "7": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Javier Morales",
+        "edad": 27,
+        "peso": 85,
+        "altura": 178,
+        "sexo": "M",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "8": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Laura D\u00edaz",
+        "edad": 33,
+        "peso": 68,
+        "altura": 162,
+        "sexo": "F",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "9": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Fernando Torres",
+        "edad": 29,
+        "peso": 77,
+        "altura": 177,
+        "sexo": "M",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "10": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Isabel G\u00f3mez",
+        "edad": 36,
+        "peso": 60,
+        "altura": 170,
+        "sexo": "F",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "11": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Alberto Ruiz",
+        "edad": 31,
+        "peso": 95,
+        "altura": 190,
+        "sexo": "M",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "12": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Carmen Vargas",
+        "edad": 26,
+        "peso": 58,
+        "altura": 160,
+        "sexo": "F",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "13": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Roberto Castro",
+        "edad": 34,
+        "peso": 85,
+        "altura": 175,
+        "sexo": "M",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "14": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Elena Ram\u00edrez",
+        "edad": 24,
+        "peso": 52,
+        "altura": 163,
+        "sexo": "F",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "15": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Diego Herrera",
+        "edad": 37,
+        "peso": 82,
+        "altura": 180,
+        "sexo": "M",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "16": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Patricia Ortiz",
+        "edad": 32,
+        "peso": 66,
+        "altura": 167,
+        "sexo": "F",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "17": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Ra\u00fal Reyes",
+        "edad": 29,
+        "peso": 90,
+        "altura": 182,
+        "sexo": "M",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "18": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Beatriz Romero",
+        "edad": 25,
+        "peso": 54,
+        "altura": 160,
+        "sexo": "F",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "19": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Hugo Delgado",
+        "edad": 28,
+        "peso": 88,
+        "altura": 178,
+        "sexo": "M",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "20": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Marta Jim\u00e9nez",
+        "edad": 30,
+        "peso": 61,
+        "altura": 165,
+        "sexo": "F",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "21": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Luis Navarro",
+        "edad": 26,
+        "peso": 72,
+        "altura": 174,
+        "sexo": "M",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "22": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Alicia Santos",
+        "edad": 35,
+        "peso": 63,
+        "altura": 168,
+        "sexo": "F",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "23": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Francisco M\u00e9ndez",
+        "edad": 33,
+        "peso": 78,
+        "altura": 176,
+        "sexo": "M",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "24": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Julia P\u00e9rez",
+        "edad": 31,
+        "peso": 59,
+        "altura": 160,
+        "sexo": "F",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "25": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Antonio Silva",
+        "edad": 38,
+        "peso": 92,
+        "altura": 183,
+        "sexo": "M",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "26": {
+        "estado": "activo",
+        "membresia": "Paga",
+        "nombre": "Sara Mart\u00edn",
+        "edad": 23,
+        "peso": 57,
+        "altura": 162,
+        "sexo": "F",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "27": {
+        "estado": "inactivo",
+        "membresia": "Inpaga",
+        "nombre": "Manuel Espinosa",
+        "edad": 29,
+        "peso": 86,
+        "altura": 179,
+        "sexo": "M",
+        "objetivo": "Aumentar masa muscular"
+    },
+    "28": {
+        "estado": "inactivo",
+        "membresia": "Inpaga",
+        "nombre": "Cristina Gil",
+        "edad": 30,
+        "peso": 62,
+        "altura": 166,
+        "sexo": "F",
+        "objetivo": "Disminuir grasa corporal"
+    },
+    "29": {
+        "estado": "inactivo",
+        "membresia": "Inpaga",
+        "nombre": "Gabriel Alonso",
+        "edad": 27,
+        "peso": 84,
+        "altura": 180,
+        "sexo": "M",
+        "objetivo": "Mantener estado f\u00edsico"
+    },
+    "30": {
+        "estado": "inactivo",
+        "membresia": "Pendiente",
+        "nombre": "Ver\u00f3nica Iglesias",
+        "edad": 34,
+        "peso": 60,
+        "altura": 164,
+        "sexo": "F",
+        "objetivo": "Aumentar masa muscular"
+    }
+}
