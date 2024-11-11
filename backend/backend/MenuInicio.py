@@ -927,9 +927,8 @@ def main():
         input("\nPresione ENTER para volver al menú.")
         print("\n\n")
     guardarDatos('clientes.json', personas)  # Guarda los datos de clientes en el archivo JSON
-    guardarDatos('clientes.json', personas)  # Guarda los datos de clientes en el archivo JSON
+
 
 if __name__ == "__main__":
     main()
-if __name__ == "__main__":
-    main()
+    
