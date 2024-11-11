@@ -298,5 +298,15 @@
         "altura": 164,
         "sexo": "F",
         "objetivo": "Aumentar masa muscular"
+    },
+    "31": {
+        "nombre": "Juan Gonzalez",
+        "edad": 18,
+        "peso": 72.0,
+        "altura": 169,
+        "sexo": "M",
+        "objetivo": "disminuir grasa corporal",
+        "estado": "activo",
+        "membresia": "paga"
     }
 }
