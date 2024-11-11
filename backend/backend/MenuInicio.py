@@ -817,16 +817,16 @@ while True:
         print()
         
         opcion = input("Seleccione una opción: ")
-        if opcion in [str(i) for i in range(0, opciones)]: # Sólo continua si se elije una opcion de menú válida
+        if opcion in [str(i) for i in range(0, opciones)]:
             break
         else:
             input("Opción inválida. Presione ENTER para volver a seleccionar.")
     print()
 
-    if opcion == "0":  # Opción salir del programa
-        exit()  # También puede ser sys.exit() para lo cual hay que importar el módulo sys
+    if opcion == "0":  
+        exit()  
 
-    elif opcion == "1":  # Gestión de Clientes
+    elif opcion == "1":  
         while True:
             print()
             print("---------------------------")
@@ -839,7 +839,7 @@ while True:
             print("[0] Volver al menú")
             OpcionMenuGestionClientes = input("Seleccione una opción: ")
             
-            if OpcionMenuGestionClientes == "0": #Volver al menu principal
+            if OpcionMenuGestionClientes == "0":
                 break
             
             elif OpcionMenuGestionClientes == "1":
@@ -853,7 +853,7 @@ while True:
             else:
                 input("Opción inválida. Presione ENTER para volver a seleccionar.")
 
-    elif opcion == "2":  # Gestión de Rutinas
+    elif opcion == "2": 
         while True:
             print()
             print("---------------------------")
@@ -865,7 +865,7 @@ while True:
             print("[0] Volver al menú")
             OpcionMenuGestionRutinas = input("Seleccione una opción: ")
             
-            if OpcionMenuGestionRutinas == "0":  # Volver al menú principal
+            if OpcionMenuGestionRutinas == "0": 
                 break
             
             elif OpcionMenuGestionRutinas == "1":
@@ -875,7 +875,7 @@ while True:
             elif OpcionMenuGestionRutinas == "3":
                 input("Opción inválida. Presione ENTER para volver a seleccionar.")
 
-    elif opcion == "3":  # Gestión de Dietas
+    elif opcion == "3": 
         while True:
             print()
             print("---------------------------")
@@ -887,7 +887,7 @@ while True:
             print("[0] Volver al menú")
             OpcionMenuGestionDietas = input("Seleccione una opción: ")
             
-            if OpcionMenuGestionDietas == "0":  # Volver al menú principal
+            if OpcionMenuGestionDietas == "0":
                 break
             
             elif OpcionMenuGestionDietas == "1":
@@ -899,7 +899,7 @@ while True:
             else:
                 input("Opción inválida. Presione ENTER para volver a seleccionar.")
 
-    elif opcion == "4":  # Informes Generales
+    elif opcion == "4":
         while True:
             print()
             print("---------------------------")
@@ -911,7 +911,7 @@ while True:
             print("[0] Volver al menú")
             OpcionInformesGenerales = input("Seleccione una opción: ")
             
-            if OpcionInformesGenerales == "0":  # Volver al menú principal
+            if OpcionInformesGenerales == "0":
                 break
             
             elif OpcionInformesGenerales == "1":
