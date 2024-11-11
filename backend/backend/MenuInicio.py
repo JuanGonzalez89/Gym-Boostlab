@@ -7,6 +7,43 @@ import json
 # VARIABLES
 #----------------------------------------------------------------------------------------------
 DiccionarioUsuarios={}
+
+#----------------------------------------------------------------------------------------------
+    #DICCIONARIO
+#----------------------------------------------------------------------------------------------
+personas = {
+    1: {"estado":  "activo","membresia": "Paga","nombre": "Juan Pérez", "edad": 25, "peso": 70, "altura": 175, "sexo": "M", "objetivo": "Aumentar masa muscular"},
+    2: {"estado":  "activo","membresia": "Paga","nombre": "Ana López", "edad": 30, "peso": 65, "altura": 160, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
+    3: {"estado":  "activo","membresia": "Paga","nombre": "Carlos García", "edad": 35, "peso": 80, "altura": 180, "sexo": "M", "objetivo": "Mantener estado físico"},
+    4: {"estado":  "activo","membresia": "Paga","nombre": "María Rodríguez", "edad": 28, "peso": 55, "altura": 165, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
+    5: {"estado":  "activo","membresia": "Paga","nombre": "Pedro Sánchez", "edad": 40, "peso": 90, "altura": 185, "sexo": "M", "objetivo": "Aumentar masa muscular"},
+    6: {"estado":  "activo","membresia": "Paga","nombre": "Lucía Fernández", "edad": 22, "peso": 50, "altura": 158, "sexo": "F", "objetivo": "Mantener estado físico"},
+    7: {"estado":  "activo","membresia": "Paga","nombre": "Javier Morales", "edad": 27, "peso": 85, "altura": 178, "sexo": "M", "objetivo": "Aumentar masa muscular"},
+    8: {"estado":  "activo","membresia": "Paga","nombre": "Laura Díaz", "edad": 33, "peso": 68, "altura": 162, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
+    9: {"estado":  "activo","membresia": "Paga","nombre": "Fernando Torres", "edad": 29, "peso": 77, "altura": 177, "sexo": "M", "objetivo": "Mantener estado físico"},
+    10: {"estado": "activo","membresia": "Paga","nombre": "Isabel Gómez", "edad": 36, "peso": 60, "altura": 170, "sexo": "F", "objetivo": "Aumentar masa muscular"},
+    11: {"estado": "activo","membresia": "Paga","nombre": "Alberto Ruiz", "edad": 31, "peso": 95, "altura": 190, "sexo": "M", "objetivo": "Disminuir grasa corporal"},
+    12: {"estado": "activo","membresia": "Paga","nombre": "Carmen Vargas", "edad": 26, "peso": 58, "altura": 160, "sexo": "F", "objetivo": "Mantener estado físico"},
+    13: {"estado": "activo","membresia": "Paga","nombre": "Roberto Castro", "edad": 34, "peso": 85, "altura": 175, "sexo": "M", "objetivo": "Aumentar masa muscular"},
+    14: {"estado": "activo","membresia": "Paga","nombre": "Elena Ramírez", "edad": 24, "peso": 52, "altura": 163, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
+    15: {"estado": "activo","membresia": "Paga","nombre": "Diego Herrera", "edad": 37, "peso": 82, "altura": 180, "sexo": "M", "objetivo": "Mantener estado físico"},
+    16: {"estado": "activo","membresia": "Paga","nombre": "Patricia Ortiz", "edad": 32, "peso": 66, "altura": 167, "sexo": "F", "objetivo": "Aumentar masa muscular"},
+    17: {"estado": "activo","membresia": "Paga","nombre": "Raúl Reyes", "edad": 29, "peso": 90, "altura": 182, "sexo": "M", "objetivo": "Disminuir grasa corporal"},
+    18: {"estado": "activo","membresia": "Paga","nombre": "Beatriz Romero", "edad": 25, "peso": 54, "altura": 160, "sexo": "F", "objetivo": "Mantener estado físico"},
+    19: {"estado": "activo","membresia": "Paga","nombre": "Hugo Delgado", "edad": 28, "peso": 88, "altura": 178, "sexo": "M", "objetivo": "Aumentar masa muscular"},
+    20: {"estado": "activo","membresia": "Paga","nombre": "Marta Jiménez", "edad": 30, "peso": 61, "altura": 165, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
+    21: {"estado": "activo","membresia": "Paga","nombre": "Luis Navarro", "edad": 26, "peso": 72, "altura": 174, "sexo": "M", "objetivo": "Mantener estado físico"},
+    22: {"estado": "activo","membresia": "Paga","nombre": "Alicia Santos", "edad": 35, "peso": 63, "altura": 168, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
+    23: {"estado": "activo","membresia": "Paga","nombre": "Francisco Méndez", "edad": 33, "peso": 78, "altura": 176, "sexo": "M", "objetivo": "Mantener estado físico"},
+    24: {"estado": "activo","membresia": "Paga","nombre": "Julia Pérez", "edad": 31, "peso": 59, "altura": 160, "sexo": "F", "objetivo": "Aumentar masa muscular"},
+    25: {"estado": "activo","membresia": "Paga","nombre": "Antonio Silva", "edad": 38, "peso": 92, "altura": 183, "sexo": "M", "objetivo": "Disminuir grasa corporal"},
+    26: {"estado": "activo","membresia": "Paga","nombre": "Sara Martín", "edad": 23, "peso": 57, "altura": 162, "sexo": "F", "objetivo": "Mantener estado físico"},
+    27: {"estado": "inactivo","membresia":"Inpaga","nombre": "Manuel Espinosa", "edad": 29, "peso": 86, "altura": 179, "sexo": "M", "objetivo": "Aumentar masa muscular"},
+    28: {"estado": "inactivo","membresia":"Inpaga","nombre": "Cristina Gil", "edad": 30, "peso": 62, "altura": 166, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
+    29: {"estado": "inactivo","membresia":"Inpaga","nombre": "Gabriel Alonso", "edad": 27, "peso": 84, "altura": 180, "sexo": "M", "objetivo": "Mantener estado físico"},
+    30: {"estado": "inactivo","membresia":"Pendiente","nombre": "Verónica Iglesias", "edad": 34, "peso": 60, "altura": 164, "sexo": "F", "objetivo": "Aumentar masa muscular"}}
+    
+
 #----------------------------------------------------------------------------------------------
 # FUNCIONES
 #----------------------------------------------------------------------------------------------
@@ -125,7 +162,7 @@ def altaCliente(personas):
             id, cliente["nombre"], cliente["edad"], cliente["peso"], cliente["altura"], cliente["sexo"], cliente["objetivo"], cliente["membresia"], cliente["estado"]
         ))
     print("-" * 125)
-
+    
 def modificarCliente(personas):
     """
     Modifica los atributos de un cliente en el diccionario de usuarios.
@@ -277,6 +314,13 @@ def guardarDatos(archivoJson, datos):
     with open(archivoJson, 'w') as archivo:  # Abre el archivo en modo escritura
         json.dump(datos, archivo, indent=4)  # Convierte el diccionario de Python a formato JSON y lo guarda en el archivo
 
+def mostrarDatos(datos):
+    if datos:
+        print("Contenido del archivo JSON:")
+        print(json.dumps(datos, indent=4))  # Muestra el contenido en formato JSON estructurado
+    else:
+        print("No hay datos para mostrar.")
+
 def InformeMembresiaClientes(personas):
     print("---------------------------------")
     print("INFORME DE MEMBRESÍA DE CLIENTES")
@@ -313,7 +357,6 @@ def InformeClientesInactivos(personas):
     # Si no hay clientes inactivos, informamos al usuario
     if not hay_inactivos:
         print("No hay clientes inactivos.")
-    
 #----------------------------------------------------------------------------------------------
 # CUERPO PRINCIPAL
 #----------------------------------------------------------------------------------------------
@@ -325,38 +368,6 @@ def main():
     None
     """
     personas = cargarDatos('clientes.json') 
-    personas = {
-    1: {"estado":  "activo","membresia": "Paga","nombre": "Juan Pérez", "edad": 25, "peso": 70, "altura": 175, "sexo": "M", "objetivo": "Aumentar masa muscular"},
-    2: {"estado":  "activo","membresia": "Paga","nombre": "Ana López", "edad": 30, "peso": 65, "altura": 160, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
-    3: {"estado":  "activo","membresia": "Paga","nombre": "Carlos García", "edad": 35, "peso": 80, "altura": 180, "sexo": "M", "objetivo": "Mantener estado físico"},
-    4: {"estado":  "activo","membresia": "Paga","nombre": "María Rodríguez", "edad": 28, "peso": 55, "altura": 165, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
-    5: {"estado":  "activo","membresia": "Paga","nombre": "Pedro Sánchez", "edad": 40, "peso": 90, "altura": 185, "sexo": "M", "objetivo": "Aumentar masa muscular"},
-    6: {"estado":  "activo","membresia": "Paga","nombre": "Lucía Fernández", "edad": 22, "peso": 50, "altura": 158, "sexo": "F", "objetivo": "Mantener estado físico"},
-    7: {"estado":  "activo","membresia": "Paga","nombre": "Javier Morales", "edad": 27, "peso": 85, "altura": 178, "sexo": "M", "objetivo": "Aumentar masa muscular"},
-    8: {"estado":  "activo","membresia": "Paga","nombre": "Laura Díaz", "edad": 33, "peso": 68, "altura": 162, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
-    9: {"estado":  "activo","membresia": "Paga","nombre": "Fernando Torres", "edad": 29, "peso": 77, "altura": 177, "sexo": "M", "objetivo": "Mantener estado físico"},
-    10: {"estado": "activo","membresia": "Paga","nombre": "Isabel Gómez", "edad": 36, "peso": 60, "altura": 170, "sexo": "F", "objetivo": "Aumentar masa muscular"},
-    11: {"estado": "activo","membresia": "Paga","nombre": "Alberto Ruiz", "edad": 31, "peso": 95, "altura": 190, "sexo": "M", "objetivo": "Disminuir grasa corporal"},
-    12: {"estado": "activo","membresia": "Paga","nombre": "Carmen Vargas", "edad": 26, "peso": 58, "altura": 160, "sexo": "F", "objetivo": "Mantener estado físico"},
-    13: {"estado": "activo","membresia": "Paga","nombre": "Roberto Castro", "edad": 34, "peso": 85, "altura": 175, "sexo": "M", "objetivo": "Aumentar masa muscular"},
-    14: {"estado": "activo","membresia": "Paga","nombre": "Elena Ramírez", "edad": 24, "peso": 52, "altura": 163, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
-    15: {"estado": "activo","membresia": "Paga","nombre": "Diego Herrera", "edad": 37, "peso": 82, "altura": 180, "sexo": "M", "objetivo": "Mantener estado físico"},
-    16: {"estado": "activo","membresia": "Paga","nombre": "Patricia Ortiz", "edad": 32, "peso": 66, "altura": 167, "sexo": "F", "objetivo": "Aumentar masa muscular"},
-    17: {"estado": "activo","membresia": "Paga","nombre": "Raúl Reyes", "edad": 29, "peso": 90, "altura": 182, "sexo": "M", "objetivo": "Disminuir grasa corporal"},
-    18: {"estado": "activo","membresia": "Paga","nombre": "Beatriz Romero", "edad": 25, "peso": 54, "altura": 160, "sexo": "F", "objetivo": "Mantener estado físico"},
-    19: {"estado": "activo","membresia": "Paga","nombre": "Hugo Delgado", "edad": 28, "peso": 88, "altura": 178, "sexo": "M", "objetivo": "Aumentar masa muscular"},
-    20: {"estado": "activo","membresia": "Paga","nombre": "Marta Jiménez", "edad": 30, "peso": 61, "altura": 165, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
-    21: {"estado": "activo","membresia": "Paga","nombre": "Luis Navarro", "edad": 26, "peso": 72, "altura": 174, "sexo": "M", "objetivo": "Mantener estado físico"},
-    22: {"estado": "activo","membresia": "Paga","nombre": "Alicia Santos", "edad": 35, "peso": 63, "altura": 168, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
-    23: {"estado": "activo","membresia": "Paga","nombre": "Francisco Méndez", "edad": 33, "peso": 78, "altura": 176, "sexo": "M", "objetivo": "Mantener estado físico"},
-    24: {"estado": "activo","membresia": "Paga","nombre": "Julia Pérez", "edad": 31, "peso": 59, "altura": 160, "sexo": "F", "objetivo": "Aumentar masa muscular"},
-    25: {"estado": "activo","membresia": "Paga","nombre": "Antonio Silva", "edad": 38, "peso": 92, "altura": 183, "sexo": "M", "objetivo": "Disminuir grasa corporal"},
-    26: {"estado": "activo","membresia": "Paga","nombre": "Sara Martín", "edad": 23, "peso": 57, "altura": 162, "sexo": "F", "objetivo": "Mantener estado físico"},
-    27: {"estado": "inactivo","membresia":"Inpaga","nombre": "Manuel Espinosa", "edad": 29, "peso": 86, "altura": 179, "sexo": "M", "objetivo": "Aumentar masa muscular"},
-    28: {"estado": "inactivo","membresia":"Inpaga","nombre": "Cristina Gil", "edad": 30, "peso": 62, "altura": 166, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
-    29: {"estado": "inactivo","membresia":"Inpaga","nombre": "Gabriel Alonso", "edad": 27, "peso": 84, "altura": 180, "sexo": "M", "objetivo": "Mantener estado físico"},
-    30: {"estado": "inactivo","membresia":"Pendiente","nombre": "Verónica Iglesias", "edad": 34, "peso": 60, "altura": 164, "sexo": "F", "objetivo": "Aumentar masa muscular"}}
-    
     rutinas = {
     #----------------------------------------------------------------------------------------------
     #RUTINAS DISMINUIR GRASA CORPORAL
@@ -536,7 +547,7 @@ def main():
         "Ejercicios": ["Sentadilla", "Flexiones", "Crunch abdominal", "Plancha", "Remo con banda"]
     },
     #----------------------------------------------------------------------------------------------
-    #MANTENER ESTADO FISICO
+    #RUTINAS MANTENER ESTADO FISICO
     #----------------------------------------------------------------------------------------------
     21: {
 
@@ -730,7 +741,7 @@ def main():
     },
 
     #----------------------------------------------------------------------------------------------
-    #DIETAS DEFICIT CALORICO
+    #DIETAS AUMENTAR MASA MUSCULAR
     #----------------------------------------------------------------------------------------------
     21: {
 
@@ -786,94 +797,86 @@ def main():
 
     
 
-    #----------------------------------------------------------------------------------------------
-    # Bloque de menú
-    #----------------------------------------------------------------------------------------------
-    while True:
-        opciones = 5
-        while True: 
+#----------------------------------------------------------------------------------------------
+# Bloque de menú
+#----------------------------------------------------------------------------------------------
+
+while True:
+    opciones = 5
+    while True: 
+        print()
+        print("---------------------------")
+        print("MENÚ DEL SISTEMA           ")
+        print("---------------------------")
+        print("[1] Gestión de Clientes")
+        print("[2] Gestión de Rutinas")
+        print("[3] Gestión de Dietas")
+        print("[4] Informes Generales")
+        print("---------------------------")
+        print("[0] Salir del programa")
+        print()
+        
+        opcion = input("Seleccione una opción: ")
+        if opcion in [str(i) for i in range(0, opciones)]: # Sólo continua si se elije una opcion de menú válida
+            break
+        else:
+            input("Opción inválida. Presione ENTER para volver a seleccionar.")
+    print()
+
+    if opcion == "0":  # Opción salir del programa
+        exit()  # También puede ser sys.exit() para lo cual hay que importar el módulo sys
+
+    elif opcion == "1":  # Gestión de Clientes
+        while True:
             print()
             print("---------------------------")
-            print("MENÚ DEL SISTEMA           ")
+            print("MENU GESTIÓN DE CLIENTES")
             print("---------------------------")
-            print("[1] Gestión de Clientes")
-            print("[2] Gestión de Rutinas")
-            print("[3] Gestión de Dietas")
-            print("[4] Informes Generales")
-            print("---------------------------")
-            print("[0] Salir del programa")
-            print()
+            print("[1] Ingresar Cliente")
+            print("[2] Modificar Cliente")
+            print("[3] Inactivar Cliente")
+            print("[4] Emitir listado Clientes")
+            print("[0] Volver al menú")
+            OpcionMenuGestionClientes = input("Seleccione una opción: ")
             
-            opcion = input("Seleccione una opción: ")
-            if opcion in [str(i) for i in range(0, opciones)]: # Sólo continua si se elije una opcion de menú válida
+            if OpcionMenuGestionClientes == "0": #Volver al menu principal
                 break
+            
+            elif OpcionMenuGestionClientes == "1":
+                altaCliente(personas)
+            elif OpcionMenuGestionClientes == "2":
+                modificarCliente(personas)
+            elif OpcionMenuGestionClientes == "3":
+                inactivarClientes(personas)
+            elif OpcionMenuGestionClientes == "4":
+                listadoClientes(personas)
             else:
                 input("Opción inválida. Presione ENTER para volver a seleccionar.")
-        print()
 
-        if opcion == "0": # Opción salir del programa
-            exit() # También puede ser sys.exit() para lo cual hay que importar el módulo sys
-
-        elif opcion == "1":
-            OpcionesMenuGestionClientes=5
-            while True:
-                print()
-                print("---------------------------")
-                print("MENU GESTIÓN DE CLIENTES")
-                print("---------------------------")
-                print("[1] Ingresar Cliente")
-                print("[2] Modificar Cliente")
-                print("[3] Inactivar Cliente")
-                print("[4] Emitir listado Clientes")
-                print("[0] Volver al menú")
-                OpcionMenuGestionClientes=input("Seleccione una opción: ")
-                if OpcionMenuGestionClientes in [str(i) for i in range(0, OpcionesMenuGestionClientes)]:
-                    break
-                else:
-                    input("Opción inválida. Presione ENTER para volver a seleccionar.")
+    elif opcion == "2":  # Gestión de Rutinas
+        while True:
             print()
-            if OpcionMenuGestionClientes=="1":
-                altaCliente(personas)
-            elif OpcionMenuGestionClientes=="2":
-                modificarCliente(personas)
+            print("---------------------------")
+            print("MENU GESTIÓN DE RUTINAS")
+            print("---------------------------")
+            print("[1] Asignar nueva rutina")
+            print("[2] Modificar Rutina")
+            print("[3] Emitir Resumen de Rutinas asignadas")
+            print("[0] Volver al menú")
+            OpcionMenuGestionRutinas = input("Seleccione una opción: ")
             
-            elif OpcionMenuGestionClientes=="3":
-               inactivarClientes(personas)
-        
+            if OpcionMenuGestionRutinas == "0":  # Volver al menú principal
+                break
             
-            elif OpcionMenuGestionClientes=="4":
-                listadoClientes(personas)
-            
-            elif OpcionMenuGestionClientes=="0":
-                exit()
-            
-            
-        elif opcion == "2":
-                OpcionesMenuGestionRutinas=4
-                print()
-                print("---------------------------")
-                print("MENU GESTIÓN DE RUTINAS")
-                print("---------------------------")
-                print("[1] Asignar nueva rutina")
-                print("[2] Modificar Rutina")
-                print("[3] Emitir Resumen de Rutinas asignadas")
-                print("[0] Volver al menú")
-                OpcionMenuGestionRutinas=input("Seleccione una opción: ")
-                if OpcionMenuGestionRutinas in [str(i) for i in range(0, OpcionesMenuGestionRutinas)]:
-                    break
-                else:
-                    input("Opción inválida. Presione ENTER para volver a seleccionar.")
-                print()
-                if OpcionMenuGestionRutinas=="1":
-                    ...
-                elif OpcionMenuGestionRutinas=="2":
-                    ...
-                elif OpcionMenuGestionRutinas=="3":
-                    ...
-                elif OpcionMenuGestionRutinas=="0":
-                    return
-        elif opcion == "3":
-            OpcionesMenuGestionDietas=4
+            elif OpcionMenuGestionRutinas == "1":
+                ...
+            elif OpcionMenuGestionRutinas == "2":
+                ...
+            elif OpcionMenuGestionRutinas == "3":
+                input("Opción inválida. Presione ENTER para volver a seleccionar.")
+
+    elif opcion == "3":  # Gestión de Dietas
+        while True:
             print()
             print("---------------------------")
             print("MENU GESTIÓN DE DIETAS")
@@ -882,23 +885,22 @@ def main():
             print("[2] Modificar Dieta")
             print("[3] Emitir Resumen de Dietas asignadas")
             print("[0] Volver al menú")
-            OpcionMenuGestionDietas=input("Seleccione una opción: ")
-            if OpcionMenuGestionDietas in [str(i) for i in range(0, OpcionesMenuGestionDietas)]:
+            OpcionMenuGestionDietas = input("Seleccione una opción: ")
+            
+            if OpcionMenuGestionDietas == "0":  # Volver al menú principal
                 break
+            
+            elif OpcionMenuGestionDietas == "1":
+                ...
+            elif OpcionMenuGestionDietas == "2":
+                ...
+            elif OpcionMenuGestionDietas == "3":
+                ...
             else:
                 input("Opción inválida. Presione ENTER para volver a seleccionar.")
-            print()
-            if OpcionMenuGestionDietas=="1":
-                ...
-            elif OpcionMenuGestionDietas=="2":
-                ...
-            elif OpcionMenuGestionDietas=="3":
-                ...
-            elif OpcionMenuGestionDietas=="0":
-                exit()
-            
-        elif opcion == "4":
-            OpcionesInformesGenerales = 5
+
+    elif opcion == "4":  # Informes Generales
+        while True:
             print()
             print("---------------------------")
             print("INFORMES GENERALES")
@@ -908,27 +910,25 @@ def main():
             print("[3] Emitir Informe de Clientes Inactivos")
             print("[0] Volver al menú")
             OpcionInformesGenerales = input("Seleccione una opción: ")
-            if OpcionInformesGenerales in [str(i) for i in range(0, OpcionesInformesGenerales)]:
-                pass
-            else:
-                input("Opción inválida. Presione ENTER para volver a seleccionar.")
-            print()
-            if OpcionInformesGenerales == "1":
+            
+            if OpcionInformesGenerales == "0":  # Volver al menú principal
+                break
+            
+            elif OpcionInformesGenerales == "1":
                 InformeMembresiaClientes(personas)
+                break
             elif OpcionInformesGenerales == "2":
                 ...
             elif OpcionInformesGenerales == "3":
                 InformeClientesInactivos(personas)
-            elif OpcionInformesGenerales == "0":
-                break 
+                break
+            else:
+                input("Opción inválida. Presione ENTER para volver a seleccionar.")
+
+    input("\nPresione ENTER para volver al menú.")
+    print("\n\n")
+    guardarDatos('clientes.json', personas)  #Guarda los datos de clientes en el archivo JSON
 
 
-
-        input("\nPresione ENTER para volver al menú.")
-        print("\n\n")
-    guardarDatos('clientes.json', personas)  # Guarda los datos de clientes en el archivo JSON
-
-
-if __name__ == "__main__":
-    main()
-    
+    if __name__ == "__main__":
+        main()
