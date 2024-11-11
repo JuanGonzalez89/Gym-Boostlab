@@ -2,7 +2,7 @@
 # MÓDULOS
 #----------------------------------------------------------------------------------------------
 import random
-
+import json
 #----------------------------------------------------------------------------------------------
 # VARIABLES
 #----------------------------------------------------------------------------------------------
@@ -260,7 +260,60 @@ def listadoClientes(personas):
             id, cliente["nombre"], cliente["edad"], cliente["peso"], cliente["altura"], cliente["sexo"], cliente["objetivo"], cliente["membresia"], cliente["estado"]
         ))
     print("-" * 125)
+    
+# Función para cargar datos desde un archivo JSON
+def cargarDatos(archivoJson):
+    try:
+        with open(archivoJson, 'r') as archivo:  # Abre el archivo en modo lectura
+            return json.load(archivo)  # Carga el contenido del archivo JSON y lo convierte a un diccionario de Python
+    except FileNotFoundError:
+        return {}  # Si el archivo no existe, retorna un diccionario vacío
+    except json.JSONDecodeError:
+        print("Error, archivo JSON no valido")  # Maneja el error si el archivo no es un JSON válido
+        return {}
+    
+# Función para guardar datos en un archivo JSON
+def guardarDatos(archivoJson, datos):
+    with open(archivoJson, 'w') as archivo:  # Abre el archivo en modo escritura
+        json.dump(datos, archivo, indent=4)  # Convierte el diccionario de Python a formato JSON y lo guarda en el archivo
 
+def InformeMembresiaClientes(personas):
+    print("---------------------------------")
+    print("INFORME DE MEMBRESÍA DE CLIENTES")
+    print("---------------------------------")
+    print()
+    
+    print(f"{'ID':<5} {'Nombre':<20} {'Membresía':<15}")
+    print("-" * 40)
+
+    for id_cliente, cliente in personas.items():
+        nombre = cliente.get('nombre', 'Sin nombre')  
+        membresia = cliente.get('membresia', 'Desconocida')  
+        print(f"{id_cliente:<5} {nombre:<20} {membresia:<15}")  
+
+    print("-"*40)
+
+def InformeClientesInactivos(personas):
+    print("------------------------------")
+    print("INFORME DE CLIENTES INACTIVOS")
+    print("------------------------------")
+    print()
+
+    hay_inactivos = False
+    
+    print("-"*40)
+    for id_cliente, cliente in personas.items():
+        nombre=cliente.get('nombre','Sin nombre')
+        estado=cliente.get('estado','Desconocido')
+        if cliente['estado'] == 'inactivo':
+            print(f"ID: {id_cliente:<5} {nombre:<20} {estado:<15}")
+            hay_inactivos = True
+    print("-"*40)
+
+    # Si no hay clientes inactivos, informamos al usuario
+    if not hay_inactivos:
+        print("No hay clientes inactivos.")
+    
 #----------------------------------------------------------------------------------------------
 # CUERPO PRINCIPAL
 #----------------------------------------------------------------------------------------------
@@ -271,6 +324,7 @@ def main():
     Retorna:
     None
     """
+    personas = cargarDatos('clientes.json') 
     personas = {
     1: {"estado":  "activo","membresia": "Paga","nombre": "Juan Pérez", "edad": 25, "peso": 70, "altura": 175, "sexo": "M", "objetivo": "Aumentar masa muscular"},
     2: {"estado":  "activo","membresia": "Paga","nombre": "Ana López", "edad": 30, "peso": 65, "altura": 160, "sexo": "F", "objetivo": "Disminuir grasa corporal"},
@@ -841,10 +895,10 @@ def main():
             elif OpcionMenuGestionDietas=="3":
                 ...
             elif OpcionMenuGestionDietas=="0":
-                return
+                exit()
             
         elif opcion == "4":
-            OpcionesInformesGenerales=5
+            OpcionesInformesGenerales = 5
             print()
             print("---------------------------")
             print("INFORMES GENERALES")
@@ -853,24 +907,26 @@ def main():
             print("[2] Emitir Informe de Rutinas y Dietas de los clientes")
             print("[3] Emitir Informe de Clientes Inactivos")
             print("[0] Volver al menú")
-            OpcionInformesGenerales=input("Seleccione una opción: ")
+            OpcionInformesGenerales = input("Seleccione una opción: ")
             if OpcionInformesGenerales in [str(i) for i in range(0, OpcionesInformesGenerales)]:
-                break
+                pass
             else:
                 input("Opción inválida. Presione ENTER para volver a seleccionar.")
             print()
-            if OpcionInformesGenerales=="1":
+            if OpcionInformesGenerales == "1":
+                InformeMembresiaClientes(personas)
+            elif OpcionInformesGenerales == "2":
                 ...
-            elif OpcionInformesGenerales=="2":
-                ...
-            elif OpcionInformesGenerales=="3":
-                ...
-            elif OpcionInformesGenerales=="0":
-                ...
+            elif OpcionInformesGenerales == "3":
+                InformeClientesInactivos(personas)
+            elif OpcionInformesGenerales == "0":
+                break 
+
+
 
         input("\nPresione ENTER para volver al menú.")
         print("\n\n")
+    guardarDatos('clientes.json', personas)  # Guarda los datos de clientes en el archivo JSON
 
-
-# Punto de entrada al programa
-main()
+if __name__ == "__main__":
+    main()
